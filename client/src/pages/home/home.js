@@ -1,17 +1,17 @@
 import React from 'react';
 import './home.css';
-import API from '../../utils/API';
-import { Col, Row, Container } from '../../components/Grid';
+// import API from '../../utils/API';
+import { Col, Row, Container } from '../../components/grid';
 
 class home extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            spots: [],
-            name: '',
-            address: ''
-        };
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         spots: [],
+    //         name: '',
+    //         address: ''
+    //     };
+    // }
     render() {
         return (
             <Container fluid>

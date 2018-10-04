@@ -19,4 +19,5 @@ export default {
     patchSpot: function(id, spotData) {
         return axios.patch('/api/spots/' + id, spotData)
     },
-};
+}
+

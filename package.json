@@ -4,10 +4,26 @@
   "license": "MIT",
   "main": "server.js",
   "private": true,
+  "scripts": {
+    "debug": "concurrently \"node --inspect-brk=43240 server.js\" \"npm run client\"",
+    "start": "if-env NODE_ENV=production && npm run server || npm run start:dev",
+    "server": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "seed": "node scripts/seedDB.js",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "mongoose": "^5.3.1",
     "path": "^0.12.7",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -19,26 +35,6 @@
       "target": "https://localhost:3001",
       "secure": false
     }
-  },
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
-  },
-  "scripts": {
-    "debug": "concurrently \"node --inspect-brk=43240 server.js\" \"npm run client\"",
-    "start": "if-env NODE_ENV=production && npm run server || npm run start:dev",
-    "server": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-    "seed": "node scripts/seedDB.js",
-    "client": "cd client && npm run start",
-    "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": [
     ">0.2%",
