@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
-var schema = mongoose.schema;
+var Schema = mongoose.Schema;
 
-const spotSchema = new schema({
+const spotSchema = new Schema({
     spotName: {type: String, required: true},
     spotAddress: {type: String, required: true}
 });

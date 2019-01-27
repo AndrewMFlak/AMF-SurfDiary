@@ -1,5 +1,6 @@
 var path = require('path');
-var router = require('express').router();
+var router = require('express').Router();
+
 var db = require('../models/');
 
 
