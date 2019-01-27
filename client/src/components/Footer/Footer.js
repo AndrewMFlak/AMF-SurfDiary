@@ -7,4 +7,4 @@ const Footer = () => {
         </span>
     </footer >
 }
-export default Footer
+export default Footer;

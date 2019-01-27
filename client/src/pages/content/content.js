@@ -1,9 +1,9 @@
 import React from 'react';
-import './home.css';
-// import API from '../../utils/API';
-import { Col, Row, Container } from '../../components/grid';
+import './content.css';
 
-class home extends React.Component {
+import {Col, Row, Container } from '../../components/grid';
+
+class content extends React.Component {
     // constructor(props) {
     //     super(props);
     //     this.state = {
@@ -12,14 +12,13 @@ class home extends React.Component {
     //         address: ''
     //     };
     // }
-    render() {
+    render () {
         return (
-            
             <Container fluid>
                 <Row>
                     <Col size='md-12 sm-12'>
-                        
-                        Placholder text
+
+                        Placeholder text
                     </Col>
                 </Row>
             </Container>
@@ -27,4 +26,4 @@ class home extends React.Component {
     }
 }
 
-export default home;
+export default content;

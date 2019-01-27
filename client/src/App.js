@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import home from "./pages/home/home";
+import home from "./pages/home";
+import content from "./pages/content"
+import Nav from "./components/Nav";
 // import Footer from './components/Footer/Footer';
 //routes.js used for userAuth
 // import * as routes from '../src/constants/routes';
@@ -19,8 +21,10 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <Nav />
           <Switch>
             <Route exact path="/" component={home} />
+            <Route exact path="/content" component={content} />
           </Switch>
           {/* <Footer /> */}
         </div>
