@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import home from "./pages/home";
-import content from "./pages/content"
+import content from "./pages/content";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 // import Footer from './components/Footer/Footer';
 //routes.js used for userAuth
 // import * as routes from '../src/constants/routes';
@@ -25,8 +26,10 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={home} />
             <Route exact path="/content" component={content} />
+            {/* <Route exact path="/aboutUs" components={about} />
+            <Route exact path="/surfSpot" components={form} /> */}
           </Switch>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </Router>
     );

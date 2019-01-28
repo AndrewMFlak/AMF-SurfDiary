@@ -18,8 +18,6 @@ class home extends React.Component {
             <Container fluid>
                 <Row>
                     <Col size='md-12 sm-12'>
-                        
-                        Placholder text
                     </Col>
                 </Row>
             </Container>
