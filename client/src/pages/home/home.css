@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+body {
+    clear: both;
+    overflow: auto;
+    background-image: url('../../assets/images/belmar1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+

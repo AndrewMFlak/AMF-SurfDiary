@@ -20,20 +20,20 @@ var spotFunctions = {
     create: function(req, res) {
         db.Spot
         .create(req.body)
-        .then(dbSpot=>res.json(dbSpot))
+        .then(dbModel=>res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
     update: function(req, res) {
         db.Spot
         .findOneAndUpdate({_id: req.params.id},res.body)
-        .then(dbSpot=> res.json(dbSpot))
+        .then(dbModel=> res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
     remove: function(req, res) {
         db.Spot
         .findById({_id: req.params.id})
-        .then(dbSpot=> dbSpot.remove())
-        .then(dbSpot => res.json(dbSpot))
+        .then(dbModel=> dbModel.remove())
+        .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     }
 }

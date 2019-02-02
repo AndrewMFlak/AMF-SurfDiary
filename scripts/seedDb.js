@@ -21,16 +21,16 @@ const surfSpot = [
     },
     {
         spotName: "Sandy Hook",
-        spotName: "Sandy Hook, NJ",
+        spotLocation: "Sandy Hook, NJ",
         spotNotes: "Parking available.  Restrooms and picnic tables near by.  Spot can get a little crowded.  The only known point break in New Jersey.",
         date: new Date(Date.now())
     }
 ];
 
-console.log(surfSpot);
+// console.log(surfSpot);
 
 db.Spot
-    db.Spot.deleteMany({})
+    .deleteMany({})
     .then(() => db.Spot.collection.insertMany(surfSpot))
     .then(data => {
         console.log(data.insertedIds.length + " records inserted!");

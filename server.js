@@ -32,4 +32,8 @@ mongoose.connect(
 // Start the API server
 app.listen(PORT, function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+    console.log('<br>');
+    console.log('http://localhost:3001/api/spots');
+    console.log('<br>')
+    console.log('http://localhost:3000/')
 });

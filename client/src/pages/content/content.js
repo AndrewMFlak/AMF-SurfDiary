@@ -13,7 +13,8 @@ class content extends React.Component {
         this.state = {
             spots: [],
             spotName: '',
-            spotLocation: ''
+            spotLocation: '',
+            spotNotes: ''
         };
     }
     // When the component mounts, load all surf spots and save them this this.state.spots
@@ -51,11 +52,12 @@ class content extends React.Component {
     render () {
         return (
             <Container fluid>
+                
                 <Row>
                     <Col size='md-6'>
-                        <Jumbotron>
-                            <h1>Welcome to your surf diary!</h1>
-                        </Jumbotron>
+                    <Jumbotron>
+                        <h1>Welcome to the Content Page...Finally!</h1>
+                    </Jumbotron>
                         <form>
                             <Input
                             value={this.state.spotName}
@@ -107,7 +109,7 @@ class content extends React.Component {
                     </Col>
                 </Row>
             </Container>
-        )
+        );
     }
 }
 

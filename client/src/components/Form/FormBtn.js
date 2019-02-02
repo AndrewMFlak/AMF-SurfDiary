@@ -5,7 +5,8 @@ class FormBtn extends React.Component {
 
     render() {
         // Destructing the type, className, children and onClick props, applying them to the button element
-        const { children, disabled, onClick } = this.PropTypes
+        const { children, disabled, onClick } = this.props 
+        // const { disabled, onClick } = this.PropTypes
 
         return (
             <button onClick={onClick} disabled={disabled} style={{float: "right", marginBottom: 10 }}
