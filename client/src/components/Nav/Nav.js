@@ -12,21 +12,27 @@ const Nav = () =>
                 <span className="icon-bar"/>
             </button>
             <ul className="navbar-nav">
-                <li className="nav-item">
-                    <Link className="nav-link hvr-fade" to={routes.CONTENT}>
-                    Content
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link hvr-fade" to={routes.SOMETHING}>
-                    Something
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link hvr-fade" to={routes.HOME}>
-                    Home
-                    </Link>
-                </li>
+                <div className="navItemContainer">
+                    <li className="nav-item">
+                        <Link className="nav-link hvr-fade" to={routes.CONTENT}>
+                        Content
+                        </Link>
+                    </li>
+                </div>
+                <div className="navItemContainer">
+                    <li className="nav-item">
+                        <Link className="nav-link hvr-fade" to={routes.SOMETHING}>
+                        Something
+                        </Link>
+                    </li>
+                </div>
+                <div className="navItemContainer">
+                    <li className="nav-item">
+                        <Link className="nav-link hvr-fade" to={routes.HOME}>
+                        Home
+                        </Link>
+                    </li>
+                </div>
             </ul>
         </div>
     </nav>;

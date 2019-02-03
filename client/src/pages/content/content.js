@@ -66,58 +66,62 @@ class content extends React.Component {
             <Container fluid>          
                 <Row>
                     <Col size='md-6'>
-                        <Jumbotron>
-                            <h1>Welcome to the Content Page...Finally!</h1>
-                        </Jumbotron>
-                        <form>
-                            <Input
-                            value={this.state.spotName}
-                            onChange={this.handleInputChange}
-                            name="spotName"
-                            placeholder="Surf Spot Name (required)"
-                            />
-                            <Input
-                            value={this.state.spotLocation}
-                            onChange={this.handleInputChange}
-                            name="spotLocation"
-                            placeholder="Surf Spot Location (required)"
-                            />
-                            <TextArea
-                            value={this.state.spotNotes}
-                            onChange={this.handleInputChange}
-                            name="spotNotes"
-                            placeholder="Surf Spot Notes (Optional)"
-                            />
-                            <FormBtn
-                            disabled={!(this.state.spotName) && (this.state.spotLocation)}
-                            onClick={this.handleFormSubmit}
-                            >
-                            Submit Spot Info
-                            </FormBtn>
-                        </form>
+                        <div className ="formDiv"> 
+                            <Jumbotron>
+                                <h1>Welcome to the Content Page...Finally!</h1>
+                            </Jumbotron>
+                            <form>
+                                <Input
+                                value={this.state.spotName}
+                                onChange={this.handleInputChange}
+                                name="spotName"
+                                placeholder="Surf Spot Name (required)"
+                                />
+                                <Input
+                                value={this.state.spotLocation}
+                                onChange={this.handleInputChange}
+                                name="spotLocation"
+                                placeholder="Surf Spot Location (required)"
+                                />
+                                <TextArea
+                                value={this.state.spotNotes}
+                                onChange={this.handleInputChange}
+                                name="spotNotes"
+                                placeholder="Surf Spot Notes (Optional)"
+                                />
+                                <FormBtn
+                                disabled={!(this.state.spotName) && (this.state.spotLocation)}
+                                onClick={this.handleFormSubmit}
+                                >
+                                Submit Spot Info
+                                </FormBtn>
+                            </form>
+                        </div>
                     </Col>
                     <Col size="md-6 sm-12">
-                        <Jumbotron>
-                            <h1>Surf Spots on my list</h1>
-                        </Jumbotron>
-                        {this.state.spots.length ? (
-                            <List>
-                                {this.state.spots.map(spot => {
-                                    return (
-                                        <ListItem key={spot._id}>
-                                            <a href={"/spots/"+spot._id}>
-                                                <strong>
+                        <div className="listContainer">
+                            <Jumbotron>
+                                <h1>Surf Spots on my list</h1>
+                            </Jumbotron>
+                            {this.state.spots.length ? (
+                                <List>
+                                    {this.state.spots.map(spot => {
+                                        return (
+                                            <ListItem key={spot._id}>
+                                                <a href={"/content/"+spot._id}>
+                                                    <strong>
                                                  {spot.spotName} , {spot.spotLocation}
                                                 </strong>
-                                            </a>
-                                            <DeleteBtn onClick={() => this.deleteSpot(spot._id)} />
-                                        </ListItem>
-                                    );
-                                })}
-                            </List>
-                        ) : (
-                            <h2>No Results to Display</h2>
-                        )}
+                                                </a>
+                                                <DeleteBtn onClick={() => this.deleteSpot(spot._id)} />
+                                            </ListItem>
+                                        );
+                                    })}
+                                </List>
+                            ) : (
+                                <h2>No Results to Display</h2>
+                            )}
+                        </div>
                     </Col>
                 </Row>
             </Container>

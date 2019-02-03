@@ -41,5 +41,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewMFlak/AMF-SurfDiary.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/AndrewMFlak/AMF-SurfDiary/issues"
+  },
+  "homepage": "https://github.com/AndrewMFlak/AMF-SurfDiary#readme"
 }

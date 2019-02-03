@@ -14,12 +14,16 @@ import './App.css';
 // import { RefCountDisposable } from 'rx';
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   // this.state = {
-  //   //   authUser: null,
-  //   // };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      authUser: null,
+    };
+  }
+
+  componentDidMount() {
+
+  }
   render() {
     return (
       <Router>
@@ -30,6 +34,7 @@ class App extends Component {
             <Route exact path="/content" component={content} />
             <Route exact path="/content/:id" component={contentDetail} />
             <Route exact path="/something" component={something} />
+            {/* <Route component={NoMatch} /> */}
             {/* <Route exact path="/aboutUs" components={about} />
             <Route exact path="/surfSpot" components={form} /> */}
           </Switch>

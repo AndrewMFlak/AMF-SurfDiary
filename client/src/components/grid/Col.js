@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class col extends React.Component {
+class Col extends React.Component {
     render() {
         const { size, children } = this.props
 
@@ -15,9 +15,9 @@ class col extends React.Component {
     }
 };
 
-col.props = {
+Col.props = {
     size: PropTypes.string,
     children: PropTypes.node
 }
 
-export default col;
+export default Col;

@@ -6,8 +6,8 @@ export default {
         return axios.get('/api/spots');
     },
     //delete a single surf spot
-    deleteSpot: function() {
-        // return axios.delete('/api/spots/' + id);
+    deleteSpot: function(id) {
+        return axios.delete('/api/spots/' + id);
     },
     //post new surf spot
     saveSpot: function(spotData) {

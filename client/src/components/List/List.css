@@ -1,9 +1,13 @@
-.list-overlow-container {
-    max-height: 545px;
-    border: 2px gray solid;
-    border-radius: 4px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+/* .list-group-item{
+    background-color: transparent;
+    border: none;
+} */
+.list-overflow-container {
+  max-height: auto;
+  border: 1px #DDDDDD solid;
+  border-radius: 4px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .list-overflow-container ul {
@@ -14,6 +18,9 @@
     border-radius: 0px;
     border-left: none;
     border-right: none;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.7) 0%, rgba(32,66,96,0.8) 100%, rgba(0,0,0,0.6) 100%);
+    padding: 50px;
 }
 
 .list-overflow-container li * {
