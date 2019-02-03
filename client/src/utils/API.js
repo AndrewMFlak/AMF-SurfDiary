@@ -14,11 +14,11 @@ export default {
         return axios.post('/api/spots', spotData);
     },
     // Get surf spots with a given id
-    getSpot: function() {
-        // return axios.get('/api/spots/' + id);
+    getSpot: function(id) {
+        return axios.get('/api/spots/' + id);
     },
     patchSpot: function(id, spotData) {
-        // return axios.patch('/api/spots/' + id, spotData)
+        return axios.patch('/api/spots/' + id, spotData)
     },
 }
 

@@ -47,17 +47,28 @@ class content extends React.Component {
         });
     };
 
-    //When the form is submitted, use the API.saveSpots method to save the surf spot data and then reload all spots from the db
+    //When the form is submitted, use the API.saveSpot method to save the surf spot data and then reload all spots from the db
+    handleFormSubmit = event => {
+        event.preventDefault();
+        if (this.state.spotName && this.state.spotLocation) {
+            API.saveSpot({
+                spotName: this.state.spotName,
+                spotLocation: this.state.spotLocation,
+                spotNotes: this.state.spotNotes,  
+            })
+                .then(res => this.loadSpots())
+                .catch(err => console.log(err));
+        }
+    };
 
     render () {
         return (
-            <Container fluid>
-                
+            <Container fluid>          
                 <Row>
                     <Col size='md-6'>
-                    <Jumbotron>
-                        <h1>Welcome to the Content Page...Finally!</h1>
-                    </Jumbotron>
+                        <Jumbotron>
+                            <h1>Welcome to the Content Page...Finally!</h1>
+                        </Jumbotron>
                         <form>
                             <Input
                             value={this.state.spotName}
@@ -67,6 +78,7 @@ class content extends React.Component {
                             />
                             <Input
                             value={this.state.spotLocation}
+                            onChange={this.handleInputChange}
                             name="spotLocation"
                             placeholder="Surf Spot Location (required)"
                             />

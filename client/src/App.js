@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import home from "./pages/home";
 import content from "./pages/content";
 import something from "./pages/something";
+import contentDetail from "./pages/contentDetail";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 // import Footer from './components/Footer/Footer';
@@ -27,6 +28,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={home} />
             <Route exact path="/content" component={content} />
+            <Route exact path="/content/:id" component={contentDetail} />
             <Route exact path="/something" component={something} />
             {/* <Route exact path="/aboutUs" components={about} />
             <Route exact path="/surfSpot" components={form} /> */}

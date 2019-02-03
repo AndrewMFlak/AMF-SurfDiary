@@ -5,8 +5,9 @@ const spotSchema = new Schema({
     spotName: {type: String, required: true},
     spotLocation: {type: String, required: true},
     spotNotes: String,
-    date: {type: Date, default: Date.now}
-});
+    date: {type: Date, default: Date.now}   
+},
+    {versionKey: false});
 
 var Spot = mongoose.model('surfSpot',spotSchema);
 

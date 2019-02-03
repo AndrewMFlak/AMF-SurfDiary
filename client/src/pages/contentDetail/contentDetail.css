@@ -1,12 +1,12 @@
 * {
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
-}
+    }
 
 body {
     clear: both;
     overflow: auto;
-    background-image: url('../../assets/images/belmar2.jpg');
+    background-image: url('../../assets/images/belmar4.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
