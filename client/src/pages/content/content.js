@@ -1,6 +1,6 @@
 import React from 'react';
-import Jumbotron from "../../components/Jumbotron";
 import DeleteBtn from "../../components/DeleteBtn";
+import Jumbotron from "../../components/Jumbotron";
 import './content.css';
 import API from "../../utils/API";
 import { Col, Row, Container } from '../../components/grid';
@@ -65,11 +65,11 @@ class content extends React.Component {
         return (
             <Container fluid>          
                 <Row>
-                    <Col size='md-6'>
+                    <Col size='sm-12'>
                         <div className ="formDiv"> 
-                            <Jumbotron>
+                            {/* <Jumbotron>
                                 <h1>Welcome to the Content Page...Finally!</h1>
-                            </Jumbotron>
+                            </Jumbotron> */}
                             <form>
                                 <Input
                                 value={this.state.spotName}
@@ -98,7 +98,7 @@ class content extends React.Component {
                             </form>
                         </div>
                     </Col>
-                    <Col size="md-6 sm-12">
+                    <Col size="sm-12, md-6">
                         <div className="listContainer">
                             <Jumbotron>
                                 <h1>Surf Spots on my list</h1>

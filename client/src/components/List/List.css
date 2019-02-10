@@ -3,38 +3,19 @@
     border: none;
 } */
 .list-overflow-container {
-  max-height: auto;
+  height: 400px;
+  width: 50%;
+  /* max-height: auto; */
+  margin: 0 auto;
   border: 1px #DDDDDD solid;
   border-radius: 4px;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
-.list-overflow-container ul {
-    margin: 0;
-}
-
-.list-overflow-container li {
-    border-radius: 0px;
-    border-left: none;
-    border-right: none;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,0.7) 0%, rgba(32,66,96,0.8) 100%, rgba(0,0,0,0.6) 100%);
-    padding: 50px;
-}
-
-.list-overflow-container li * {
-    cursor: pointer;
-}
-
-.list-overflow-container li a {
-    color: #2A878C;
-}
-
-.list-overflow-container li:first-child {
-    border-top: none;
-}
-
-.list-overflow-container li:last-child {
-    border-bottom: none;
+.list-group-item {
+    overflow: auto;
+    clear: both;
+    position: absolute;
+    width: 40%;
 }

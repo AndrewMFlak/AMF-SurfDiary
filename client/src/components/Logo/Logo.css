@@ -1,0 +1,15 @@
+/* .navItemContainer-Left {
+    float: left;
+    left: 0;
+} */
+/* .nav-item-Left {
+    float: left;
+} */
+#mainLogoID {
+    clear: both;
+    overflow: auto;
+    width: 25%;
+    height: 15%;
+    border: 2px solid grey;
+    box-shadow: 15px 5px 5px black;
+}

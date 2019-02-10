@@ -3,6 +3,13 @@
     font-family: 'Amatic SC', cursive;
     }
 
+.listContainer {
+    width: 50%;
+    /* height: auto; */
+    margin: 0 auto;
+    text-align: center;
+    }
+
 body {
     clear: both;
     overflow: auto;
@@ -12,8 +19,9 @@ body {
 }
 
 .formDiv {
-    background-color: black;
+    /* background-image: linear-gradient(red, yellow, green); */
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
 }
 
-.listContainer {
-}

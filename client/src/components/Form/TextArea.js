@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import "./Form.css";
 
 class TextArea extends React.Component {
     render() {
         return (
             <div className="form-group">
-                <textarea className="form-control" rows="20" {...this.props}/>
+                <textarea className="form-control" rows="15" {...this.props}/>
             </div>
         )
     }
