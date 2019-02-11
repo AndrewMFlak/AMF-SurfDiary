@@ -1,10 +1,7 @@
 import React from 'react';
-import DeleteBtn from "../../components/DeleteBtn";
-import Jumbotron from "../../components/Jumbotron";
 import './content.css';
 import API from "../../utils/API";
 import { Col, Row, Container } from '../../components/grid';
-import { List, ListItem } from '../../components/List';
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class content extends React.Component {
@@ -65,11 +62,9 @@ class content extends React.Component {
         return (
             <Container fluid>          
                 <Row>
-                    <Col size='sm-12'>
+                    <Col size="md-6">
                         <div className ="formDiv"> 
-                            {/* <Jumbotron>
-                                <h1>Welcome to the Content Page...Finally!</h1>
-                            </Jumbotron> */}
+                            <h1>Surf Spot Entry</h1>
                             <form>
                                 <Input
                                 value={this.state.spotName}
@@ -96,31 +91,6 @@ class content extends React.Component {
                                 Submit Spot Info
                                 </FormBtn>
                             </form>
-                        </div>
-                    </Col>
-                    <Col size="sm-12, md-6">
-                        <div className="listContainer">
-                            <Jumbotron>
-                                <h1>Surf Spots on my list</h1>
-                            </Jumbotron>
-                            {this.state.spots.length ? (
-                                <List>
-                                    {this.state.spots.map(spot => {
-                                        return (
-                                            <ListItem key={spot._id}>
-                                                <a href={"/content/"+spot._id}>
-                                                    <strong>
-                                                 {spot.spotName} , {spot.spotLocation}
-                                                </strong>
-                                                </a>
-                                                <DeleteBtn onClick={() => this.deleteSpot(spot._id)} />
-                                            </ListItem>
-                                        );
-                                    })}
-                                </List>
-                            ) : (
-                                <h2>No Results to Display</h2>
-                            )}
                         </div>
                     </Col>
                 </Row>

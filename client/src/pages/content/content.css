@@ -19,9 +19,11 @@ body {
 }
 
 .formDiv {
-    /* background-image: linear-gradient(red, yellow, green); */
-    width: 50%;
-    text-align: center;
+    clear: both;
+    overflow: auto;
+    position: relative;
     margin: 0 auto;
+    text-align: left;
+    width: 60%;
 }
 
