@@ -5,7 +5,7 @@ import API from "../../utils/API";
 import { Col, Row, Container } from '../../components/grid';
 import { List, ListItem } from '../../components/List';
 
-class content extends React.Component {
+class spots extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -64,34 +64,37 @@ class content extends React.Component {
             <Container fluid>          
                 <Row>
                     <Col size="sm-12, md-6">
-                        <div className="listContainer">
-                            <div className="jumbotron">
-                                <h1>Surf Spots on my list</h1>
-                            </div>
-                            {this.state.spots.length ? (
-                                <List>
-                                    {this.state.spots.map(spot => {
-                                        return (
-                                            <ListItem key={spot._id}>
-                                                <a href={"/content/"+spot._id}>
-                                                    <strong>
-                                                 {spot.spotName} , {spot.spotLocation}
-                                                </strong>
-                                                </a>
-                                                <DeleteBtn onClick={() => this.deleteSpot(spot._id)} />
-                                            </ListItem>
-                                        );
-                                    })}
-                                </List>
-                            ) : (
-                                <h2>No Results to Display</h2>
-                            )}
-                        </div>
+                            <h1>Surf Spots on my list</h1>
                     </Col>
                 </Row>
+                <Row>
+                    <Col>
+                        <div className="listContainer">
+
+                        {this.state.spots.length ? (
+                        <List>
+                            {this.state.spots.map(spot => {
+                                return (
+                                    <ListItem key={spot._id}>
+                                        <a href={"/content/"+spot._id}>
+                                            <strong>
+                                        {spot.spotName} , {spot.spotLocation}
+                                        </strong>
+                                        </a>
+                                        <DeleteBtn onClick={() => this.deleteSpot(spot._id)} />
+                                    </ListItem>
+                                );
+                            })}
+                        </List>
+                    ) : (
+                        <h2>No Results to Display</h2>
+                    )}
+                        </div>
+                    </Col>
+                </Row>    
             </Container>
         );
     }
 }
 
-export default spot;
+export default spots;
