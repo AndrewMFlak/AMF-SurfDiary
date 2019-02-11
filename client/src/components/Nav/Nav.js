@@ -22,7 +22,7 @@ const Nav = () =>
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link className="nav-link hvr-fade" to={routes.SOMETHING}>
+                    <Link className="nav-link hvr-fade" to={routes.SPOT}>
                         Favorite Spots
                     </Link>
                 </li>

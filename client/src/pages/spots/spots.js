@@ -20,6 +20,12 @@ class spots extends React.Component {
         this.loadSpots();
     }
 
+    //manage state accross file changes
+    fileChangedHandler = (event) => {
+        this.setState({selectedFile: event.target.files[0]}
+        )
+    }
+
     // Loads all surf spots and sets them thos this.state.spots
     loadSpots = () => {
         API.getSpots()
@@ -33,7 +39,7 @@ class spots extends React.Component {
     // Deletes a spot from the database with a given id, then relaods spots from the db
     deleteSpot = id => {
         API.deleteSpot(id)
-        .then(res=> this.loadSpots())
+        .then(res=> this.getSpots())
         .catch(err => console.log(err));
     }
 
@@ -54,7 +60,7 @@ class spots extends React.Component {
                 spotLocation: this.state.spotLocation,
                 spotNotes: this.state.spotNotes,  
             })
-                .then(res => this.loadSpots())
+                .then(res => this.getSpots())
                 .catch(err => console.log(err));
         }
     };
@@ -64,7 +70,7 @@ class spots extends React.Component {
             <Container fluid>          
                 <Row>
                     <Col size="sm-12, md-6">
-                            <h1>Surf Spots on my list</h1>
+                        <h1>Surf Spots on my list</h1>
                     </Col>
                 </Row>
                 <Row>
