@@ -30,9 +30,7 @@ class spots extends React.Component {
     loadSpots = () => {
         API.getSpots()
             .then(res=>
-                this.setState({
-                    spots: res.data, spotName: "", spotLocation: "", spotNotes: ""})
-                )
+                this.setState({ spots: res.data, spotName: "", spotLocation: "", spotNotes: ""}))
                 .catch(err => console.log(err));
     };
 
@@ -41,7 +39,7 @@ class spots extends React.Component {
         API.deleteSpot(id)
         .then(res=> this.getSpots())
         .catch(err => console.log(err));
-    }
+    };
 
     // Handles updating component state when the user types in the input field
     handleInputChange = event => {
@@ -52,21 +50,22 @@ class spots extends React.Component {
     };
 
     //When the form is submitted, use the API.saveSpot method to save the surf spot data and then reload all spots from the db
-    handleFormSubmit = event => {
-        event.preventDefault();
-        if (this.state.spotName && this.state.spotLocation) {
-            API.saveSpot({
-                spotName: this.state.spotName,
-                spotLocation: this.state.spotLocation,
-                spotNotes: this.state.spotNotes,  
-            })
-                .then(res => this.getSpots())
-                .catch(err => console.log(err));
-        }
-    };
+    // handleFormSubmit = event => {
+    //     event.preventDefault();
+    //     if (this.state.spotName && this.state.spotLocation) {
+    //         API.saveSpot({
+    //             spotName: this.state.spotName,
+    //             spotLocation: this.state.spotLocation,
+    //             spotNotes: this.state.spotNotes,  
+    //         })
+    //             .then(res => this.loadSpots())
+    //             .catch(err => console.log(err));
+    //     }
+    // };
 
-    render () {
+    render() {
         return (
+
             <Container fluid>          
                 <Row>
                     <Col size="sm-12, md-6">
@@ -82,12 +81,16 @@ class spots extends React.Component {
                             {this.state.spots.map(spot => {
                                 return (
                                     <ListItem key={spot._id}>
-                                        <a href={"/content/"+spot._id}>
-                                            <strong>
-                                        {spot.spotName} , {spot.spotLocation}
-                                        </strong>
-                                        </a>
-                                        <DeleteBtn onClick={() => this.deleteSpot(spot._id)} />
+                                        <Row>
+                                            <Col>
+                                                <a href={"/content/"+spot._id}>
+                                                <strong>
+                                                {spot.spotName} , {spot.spotLocation}
+                                                </strong>
+                                                </a>
+                                                <DeleteBtn onClick={() => this.deleteSpot(spot._id)} />
+                                            </Col>
+                                        </Row>
                                     </ListItem>
                                 );
                             })}
@@ -99,7 +102,7 @@ class spots extends React.Component {
                     </Col>
                 </Row>    
             </Container>
-        );
+        )
     }
 }
 

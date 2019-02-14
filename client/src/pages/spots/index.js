@@ -1,1 +1,1 @@
-export { default } from './spots.js';
+export { default } from "./spots.js";
