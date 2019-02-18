@@ -1,9 +1,15 @@
-.container-fluid {
+/* .container-fluid {
     width: 100%;
-    position: fixed;
+    position: fixed; */
     /* text-align: center; */
-    font-weight: bold;
+    /* font-weight: bold;
     font-size: 22px;
+} */
+.navbar-inverse {
+    background-color: transparent;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
 }
 ul {
     list-style: none;

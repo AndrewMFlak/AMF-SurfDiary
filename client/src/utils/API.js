@@ -2,11 +2,11 @@ import axios from 'axios'
 
 export default {
     //get all surf spots
-    getSpots: function() {
+    getSpots: function () {
         return axios.get('/api/spots');
     },
     //delete a single surf spot
-    deleteSpot: function(id) {
+    deleteSpot: function (id) {
         return axios.delete('/api/spots/' + id);
     },
     //post new surf spot

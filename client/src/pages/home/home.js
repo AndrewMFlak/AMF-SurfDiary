@@ -38,6 +38,7 @@ class home extends React.Component {
                         <Welcome/>
                     </Col>
                 </Row>
+                <Row></Row>
             </Container>
         )
     }

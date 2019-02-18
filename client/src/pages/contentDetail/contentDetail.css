@@ -10,3 +10,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.containerBackground {
+    clear: both;
+    overflow: auto;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    background-color: gray; 
+    text-align: center;
+}

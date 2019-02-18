@@ -1,5 +1,6 @@
 import React from 'react';
 import DeleteBtn from "../../components/DeleteBtn";
+import { Link } from "react-router-dom";
 import './spots.css';
 import API from "../../utils/API";
 import { Col, Row, Container } from '../../components/grid';
@@ -22,7 +23,7 @@ class spots extends React.Component {
 
     //manage state accross file changes
     fileChangedHandler = (event) => {
-        this.setState({selectedFile: event.target.files[0]}
+        this.setState({ selectedFile: event.target.files[0] }
         )
     }
 
@@ -30,15 +31,16 @@ class spots extends React.Component {
     loadSpots = () => {
         API.getSpots()
             .then(res=>
-                this.setState({ spots: res.data, spotName: "", spotLocation: "", spotNotes: ""}))
+                this.setState({ spots: res.data, spotName: "", spotLocation: "", spotNotes: ""})
+                )
                 .catch(err => console.log(err));
     };
 
     // Deletes a spot from the database with a given id, then relaods spots from the db
     deleteSpot = id => {
         API.deleteSpot(id)
-        .then(res=> this.getSpots())
-        .catch(err => console.log(err));
+            .then(res=> this.loadSpots())
+            .catch(err => console.log(err));
     };
 
     // Handles updating component state when the user types in the input field
@@ -69,11 +71,11 @@ class spots extends React.Component {
             <Container fluid>          
                 <Row>
                     <Col size="sm-12, md-6">
-                        <h1>Surf Spots on my list</h1>
+                        <h1 className = "spotHeader">Surf Spots on my list</h1>
                     </Col>
                 </Row>
                 <Row>
-                    <Col>
+                    <Col size="sm-7 md-7">
                         <div className="listContainer">
 
                         {this.state.spots.length ? (
@@ -82,12 +84,12 @@ class spots extends React.Component {
                                 return (
                                     <ListItem key={spot._id}>
                                         <Row>
-                                            <Col>
-                                                <a href={"/content/"+spot._id}>
+                                            <Col size="sm-7 md-7">
+                                                <Link to={`/content/${spot._id}`}>
                                                 <strong>
                                                 {spot.spotName} , {spot.spotLocation}
                                                 </strong>
-                                                </a>
+                                                </Link>
                                                 <DeleteBtn onClick={() => this.deleteSpot(spot._id)} />
                                             </Col>
                                         </Row>

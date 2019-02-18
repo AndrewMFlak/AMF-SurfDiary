@@ -5,38 +5,41 @@ import "./Nav.css";
 import * as routes from '../../constants/routes.js';
 
 const Nav = () =>
-    <nav className="navbar navbar-inverse navbar-top">
+    <nav className="navbar navbar-expand-sm navbar-inverse">
         <div className="container-fluid">
-            <ul className="navbar-nav">
-                <li className="nav-logo">
-                    <Logo></Logo>
-                </li>            
-                <li className="nav-item">
-                    <Link className="nav-link hvr-fade" to={routes.HOME}>
-                        Sign-Out
+            <div className="navbar-header">
+
+                <ul className="navbar-nav">
+                    <li className="nav-logo">
+                        <Logo></Logo>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link hvr-fade" to={routes.HOME}>
+                            Sign-Out
                     </Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link hvr-fade" to={routes.HOME}>
-                        Login
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link hvr-fade" to={routes.HOME}>
+                            Login
                     </Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link hvr-fade" to={routes.SPOT}>
-                        Favorite Spots
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link hvr-fade" to={routes.SPOT}>
+                            Favorite Spots
                     </Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link hvr-fade" to={routes.CONTENT}>
-                        New Spot
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link hvr-fade" to={routes.CONTENT}>
+                            New Spot
                     </Link>
-                </li>
-                <li className="nav-item">
-                    <Link className="nav-link hvr-fade" to={routes.HOME}>
-                        Home
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link hvr-fade" to={routes.HOME}>
+                            Home
                     </Link>
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>;
 
