@@ -5,6 +5,7 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import "./contentDetail.css";
+// import MyFancyComponent from "../../components/googleMaps/MyMapsComponent";
 
 class contentDetail extends React.Component {
     constructor(props) {
@@ -50,20 +51,18 @@ class contentDetail extends React.Component {
     getReadOnly = () => (
 
         <div className="container-fluid">
-            <Row>
-                <Col size="lg-10 sm-12">
-                    <Jumbotron>
-                        <div className="containerBackground">
+            <div className="containerBackground">
+                <Row>
+                    <Col size="lg-6 sm-8">
+                        <Jumbotron>
                             <h1>
                                 {this.state.spots.spotName} at {this.state.spots.spotLocation}
                             </h1>
-                        </div>
-                    </Jumbotron>
-                </Col>
-            </Row>
-            <Row>
-                <Col size="lg-10 sm-12">
-                    <div className="containerBackground">
+                        </Jumbotron>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col size="lg-6 sm-8">
                         <article>
                             <h1>
                                 Spot Notes
@@ -72,22 +71,23 @@ class contentDetail extends React.Component {
                                 {this.state.spots.spotNotes}
                             </p>
                         </article>
-                    </div>
-                </Col>
-            </Row>
-            <Row>
-                <button onClick={() => this.handleUpdate(true)}>Update</button>
-                <Col size="md-2">
-                    <Link to="/">← Back to Authors</Link>
-                </Col>
-            </Row>
+                    </Col>
+                    {/* <MyFancyComponent/> */}
+                </Row>
+                <Row>
+                    <button onClick={() => this.handleUpdate(true)}>Update</button>
+                    <Col size="md-2">
+                        <Link to="/">← Back to Your Surf Spots</Link>
+                    </Col>
+                </Row>
+            </div>
         </div>
     );
 
     getUpdateform = () => (
         <div className="container-fluid">
             <Row>
-                <Col size="lg-10 sm-12">
+                <Col size="lg-6 sm-8">
                     <div className="containerBackground">
                         <Jumbotron>
                             <h1>What Spots Do I want to Visit</h1>
@@ -96,7 +96,7 @@ class contentDetail extends React.Component {
                 </Col>
             </Row>
             <Row>
-                <Col size="lg-10 sm-12">
+                <Col size="lg-6 sm-8">
                     <div className="containerBackground">
                         <form>
                             <Input

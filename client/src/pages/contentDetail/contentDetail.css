@@ -14,8 +14,11 @@ body {
     clear: both;
     overflow: auto;
     position: relative;
+    height: auto;
+    padding: 32px;
     width: 60%;
     margin: 0 auto;
+    border: 1px white solid;
     background-color: gray; 
-    text-align: center;
+    text-align: justify;
 }

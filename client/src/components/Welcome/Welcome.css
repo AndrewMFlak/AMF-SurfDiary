@@ -3,16 +3,16 @@
     font-family: 'Amatic SC', cursive;
 }
 .introduction {
+    height: 500px;
     font-size: 24px;
     clear: both;
     overflow: auto;
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
     border: 1px white solid;
     background-color: gray;
     padding: 35px;
-    margin: 25%;
-    position: absolute;
-    height: auto;
-    width: 50%;
-    text-align: center;
+    text-align: justify;
     box-shadow: 15px 5px 5px black;
 }

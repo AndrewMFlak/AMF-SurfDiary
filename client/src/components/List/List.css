@@ -1,6 +1,7 @@
 .list-group-item{
     background-color: transparent;
     border: none;
+    padding-bottom: 24px;
 }
 .list-overflow-container {
   height: 580px;

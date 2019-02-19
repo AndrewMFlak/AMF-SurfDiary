@@ -6,6 +6,7 @@
     clear: both;
     overflow: auto;
     position: relative;
+    padding-bottom: 20px;
     width: 100%;
 }
 .form-control {

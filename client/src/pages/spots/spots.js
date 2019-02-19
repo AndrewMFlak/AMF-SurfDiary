@@ -30,16 +30,16 @@ class spots extends React.Component {
     // Loads all surf spots and sets them thos this.state.spots
     loadSpots = () => {
         API.getSpots()
-            .then(res=>
-                this.setState({ spots: res.data, spotName: "", spotLocation: "", spotNotes: ""})
-                )
-                .catch(err => console.log(err));
+            .then(res =>
+                this.setState({ spots: res.data, spotName: "", spotLocation: "", spotNotes: "" })
+            )
+            .catch(err => console.log(err));
     };
 
     // Deletes a spot from the database with a given id, then relaods spots from the db
     deleteSpot = id => {
         API.deleteSpot(id)
-            .then(res=> this.loadSpots())
+            .then(res => this.loadSpots())
             .catch(err => console.log(err));
     };
 
@@ -68,41 +68,43 @@ class spots extends React.Component {
     render() {
         return (
 
-            <Container fluid>          
-                <Row>
-                    <Col size="sm-12, md-6">
-                        <h1 className = "spotHeader">Surf Spots on my list</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col size="sm-7 md-7">
-                        <div className="listContainer">
+            <Container fluid>
+                <div className="spotContainer">
+                    <Row>
+                        <Col size="sm-12, md-6">
+                            <h1 className="spotHeader">Surf Spots on my list</h1>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col size="sm-12, md-6">
+                            <div className="listContainer">
 
-                        {this.state.spots.length ? (
-                        <List>
-                            {this.state.spots.map(spot => {
-                                return (
-                                    <ListItem key={spot._id}>
-                                        <Row>
-                                            <Col size="sm-7 md-7">
-                                                <Link to={`/content/${spot._id}`}>
-                                                <strong>
-                                                {spot.spotName} , {spot.spotLocation}
-                                                </strong>
-                                                </Link>
-                                                <DeleteBtn onClick={() => this.deleteSpot(spot._id)} />
-                                            </Col>
-                                        </Row>
-                                    </ListItem>
-                                );
-                            })}
-                        </List>
-                    ) : (
-                        <h2>No Results to Display</h2>
-                    )}
-                        </div>
-                    </Col>
-                </Row>    
+                                {this.state.spots.length ? (
+                                    <List>
+                                        {this.state.spots.map(spot => {
+                                            return (
+                                                <ListItem key={spot._id}>
+                                                    <Row>
+                                                        <Col size="sm-12, md-6">
+                                                            <Link to={`/content/${spot._id}`}>
+                                                                <strong>
+                                                                    {spot.spotName} , {spot.spotLocation}
+                                                                </strong>
+                                                            </Link>
+                                                            <DeleteBtn onClick={() => this.deleteSpot(spot._id)} />
+                                                        </Col>
+                                                    </Row>
+                                                </ListItem>
+                                            );
+                                        })}
+                                    </List>
+                                ) : (
+                                        <h2>No Results to Display</h2>
+                                    )}
+                            </div>
+                        </Col>
+                    </Row>
+                </div>
             </Container>
         )
     }

@@ -2,3 +2,15 @@
     position: relative;
     text-align: center;
 }
+.spotContainer {
+    clear: both;
+    overflow: auto;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    height: 450px;
+    background-color: gray;
+    border: 1px white solid;
+    padding: 35px;
+    box-shadow: 5px 5px 15px black;
+}
