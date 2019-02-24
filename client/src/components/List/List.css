@@ -16,9 +16,6 @@
   border: none
 }
 
-/* .list-group-item {
-    overflow: auto;
-    clear: both;
-    position: absolute;
-    width: 40%;
-} */
+.list-group-item {
+  font-size: 18px;
+}

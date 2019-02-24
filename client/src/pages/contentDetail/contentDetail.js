@@ -5,7 +5,7 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import "./contentDetail.css";
-// import MyFancyComponent from "../../components/googleMaps/MyMapsComponent";
+import MyFancyComponent from "../../components/googleMaps";
 
 class contentDetail extends React.Component {
     constructor(props) {
@@ -72,7 +72,7 @@ class contentDetail extends React.Component {
                             </p>
                         </article>
                     </Col>
-                    {/* <MyFancyComponent/> */}
+                    <MyFancyComponent/>
                 </Row>
                 <Row>
                     <button onClick={() => this.handleUpdate(true)}>Update</button>

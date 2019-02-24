@@ -20,6 +20,7 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
+    "ajv-keywords": "^3.4.0",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
