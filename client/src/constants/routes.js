@@ -4,5 +4,5 @@ export var HOME = '/';
 export var CONTENT = '/content';
 export var SPOT = '/spots';
 export var DETAIL = '/spot/id';
-export var SOMETHING = '/something';
+export var ABOUTUS = '/aboutUs';
 export var PASSWORD_FORGET = '/pw-forget';

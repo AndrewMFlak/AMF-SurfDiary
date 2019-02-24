@@ -10,3 +10,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.textContainer {
+    text-align: justify;
+    font-size: 18px;
+}

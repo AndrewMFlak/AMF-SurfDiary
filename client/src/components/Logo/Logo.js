@@ -1,5 +1,5 @@
 import React from "react";
-import MainLogo from "../../assets/images/logo/HatchfulExport-All/logo.png";
+import MainLogo from "../../assets/images/Andrew_SurfDiary_logo.png";
 import "./Logo.css";
 
 class Logo extends React.Component {

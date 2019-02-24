@@ -36,6 +36,7 @@ ul {
 }
 .nav-item {
     top: 20px;
+    font-size: 20px;
     display: block;
     float: right;
     padding: 20px;

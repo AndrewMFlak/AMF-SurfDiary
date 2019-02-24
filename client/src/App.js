@@ -5,7 +5,7 @@ import home from "./pages/home";
 import content from "./pages/content";
 import spots from "./pages/spots";
 // import spotDetail from "./pages/spotDetail";
-import something from "./pages/something";
+import aboutUs from "./pages/aboutUs";
 import contentDetail from "./pages/contentDetail";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -37,7 +37,7 @@ class App extends Component {
             <Route exact path="/content/:id" component={contentDetail} />
             <Route exact path="/spots" component={spots} />
             {/* <Route exact path="/spots/:id" component={spotDetail} */}
-            <Route exact path="/something" component={something} />
+            <Route exact path="/aboutUs" component={aboutUs} />
             {/* <Route component={NoMatch} /> */}
             {/* <Route exact path="/aboutUs" components={about} />
             <Route exact path="/surfSpot" components={form} /> */}
