@@ -10,6 +10,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+h1 {
+    
+}
 .textContainer {
     text-align: justify;
     font-size: 18px;

@@ -56,7 +56,7 @@ class contentDetail extends React.Component {
                     <Col size="lg-6 sm-8">
                         <Jumbotron>
                             <h1>
-                                {this.state.spots.spotName} at {this.state.spots.spotLocation}
+                                {this.state.spots.spotName} located at {this.state.spots.spotLocation}
                             </h1>
                         </Jumbotron>
                     </Col>
@@ -66,7 +66,7 @@ class contentDetail extends React.Component {
                         <article>
                             <h1>
                                 Spot Notes
-                        </h1>
+                            </h1>
                             <p>
                                 {this.state.spots.spotNotes}
                             </p>
