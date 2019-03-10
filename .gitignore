@@ -62,6 +62,3 @@ typings/
 
 # ignore package lock files
 package-lock.json
-
-# yarn lock ignore
-yarn.lock
