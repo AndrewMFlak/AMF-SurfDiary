@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 //routes.js used for userAuth
 // import * as routes from '../src/constants/routes';
 import './App.css';
-// import { RefCountDisposable } from 'rx';
+require('dotenv').config({path:__dirname+'/.env'})
 
 class App extends Component {
   constructor(props) {

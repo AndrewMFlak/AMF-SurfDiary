@@ -8,6 +8,13 @@ var controller = require('./controllers/controller')
 var app = express();
 var PORT = process.env.PORT || 3001;
 
+// require .env file
+require('dotenv').config({path:__dirname+'/.env'});
+// .env TEST
+console.log(process.env.REACT_APP_SERVERTEST);
+
+
+
 // Configure body parser for AJAX request
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
