@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import login from "./pages/login";
 import home from "./pages/home";
 import content from "./pages/content";
 import spots from "./pages/spots";
@@ -33,6 +34,7 @@ class App extends Component {
           <Nav />
           <Switch>
             <Route exact path="/" component={home} />
+            <Route exact path="/login" component={login}/>
             <Route exact path="/content" component={content} />
             <Route exact path="/content/:id" component={contentDetail} />
             <Route exact path="/spots" component={spots} />
