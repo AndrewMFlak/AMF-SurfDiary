@@ -3,12 +3,12 @@
     font-family: 'Amatic SC', cursive;
     }
 
-.listContainer {
+/* .listContainer {
     width: 50%;
-    /* height: auto; */
+    height: auto;
     margin: 0 auto;
     text-align: center;
-    }
+    } */
 
 body {
     clear: both;

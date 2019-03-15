@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Amatic SC, cursive'
+}
+body {
+    clear: both;
+    overflow: auto;
+    background-image:url('../../assets/images/belmar2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.loginDiv {
+    clear: both;
+    overflow: auto;
+    position: relative;
+    height: 350px;
+    margin: 0 auto;
+    text-align: left;
+    width: 60%;
+    position: 1px white solid;
+    background-color: gray;
+    padding: 35px;
+    text-align: left;
+    box-shadow: 15px 5px 5px black;
+}

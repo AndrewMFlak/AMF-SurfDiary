@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import login from "./pages/login";
+import login from "./pages/login/login";
 import home from "./pages/home";
 import content from "./pages/content";
 import spots from "./pages/spots";

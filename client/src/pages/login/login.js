@@ -40,14 +40,15 @@ class login extends React.Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col size='md-6'>
+                    <Col size='md-4'>
                         <div className ="loginDiv">
                             <h1>Welcome To The Surf Diary</h1>
                             <br/>
                             <form>
                                 <Input value={this.state.userName} onChange={this.handleInputChange} name="userName" placeholder="Please Enter Your Username"/>
                                 <Input value={this.state.password} onChange={this.handleInputChange} name="password" placeholder="Please Enter You Password" />
-                                <FormBtn disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}></FormBtn>
+                                <FormBtn disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}>Login To Surf Diary</FormBtn>
+                                <FormBtn disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}>Create New User</FormBtn>
                             </form>
                         </div>
                     </Col>

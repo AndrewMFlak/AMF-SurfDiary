@@ -12,3 +12,8 @@
     font-size: 18px;
     color: white;
 }
+.about {
+    clear: both;
+    overflow: auto;
+    color: orange;
+}
