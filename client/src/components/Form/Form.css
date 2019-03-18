@@ -12,12 +12,34 @@
 .form-control {
     width: 100%;
     margin: auto;
-    height: 30px;
-    font-size: 18pt;
+    font-size: 16pt;
+    /* height: 30px; */
+
+}
+.form-controlTextArea {
+    width: 100%;
+    margin: auto;
+    /* height: 30px; */
 
 }
 #format {
     clear: both;
     overflow: auto;
     margin-top: 5px;
+}
+#buttonFormat {
+    font-size: 12pt;
+}
+/* #inputRow {
+    clear: both;
+    overflow: auto;
+    font-size: 16pt;
+}
+#inputTextArea {
+    clear: both;
+    overflow: auto;
+    font-size: 16pt;
+} */
+button {
+    font-size: 14;
 }

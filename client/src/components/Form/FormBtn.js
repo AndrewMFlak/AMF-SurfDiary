@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Form.css';
 
 class FormBtn extends React.Component {
 
@@ -10,7 +11,7 @@ class FormBtn extends React.Component {
 
         return (
             <button onClick={onClick} disabled={disabled} style={{marginBottom: 10 }}
-            className="btn btn-success">
+            className="btn btn-success" id="buttonFormat">
             {children}
             </button>
         );

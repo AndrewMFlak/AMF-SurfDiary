@@ -6,7 +6,7 @@ class Input extends React.Component {
     render () {
         return (
             <div className="form-group">
-                <input className="form-control" {...this.props}/>
+                <input className="form-control" id="inputFormat"{...this.props}/>
             </div>
         )
     }

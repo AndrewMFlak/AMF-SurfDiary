@@ -6,7 +6,7 @@ class TextArea extends React.Component {
     render() {
         return (
             <div className="form-group">
-                <textarea className="form-control" rows="25" {...this.props}/>
+                <textarea className="form-control" rows="10" {...this.props}/>
             </div>
         )
     }

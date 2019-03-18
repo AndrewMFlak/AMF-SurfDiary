@@ -9,7 +9,8 @@
     width: 60%;
     margin: 0 auto;
     height: 450px;
-    background-color: gray;
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;    padding: 35px;
     border: 1px white solid;
     padding: 35px;
     box-shadow: 5px 5px 15px black;
