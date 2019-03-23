@@ -8,7 +8,7 @@
     "debug": "concurrently \"node --inspect-brk=43240 server.js\" \"npm run client\"",
     "start": "if-env NODE_ENV=production && npm run server || npm run start:dev",
     "server": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client",
     "seed": "node scripts/seedDb.js",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
@@ -24,7 +24,6 @@
   "dependencies": {
     "ajv": "^6.10.0",
     "ajv-keywords": "^3.4.0",
-    "aws-amplify": "^1.1.22",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "buffer": "^5.2.1",
@@ -41,8 +40,7 @@
     "react-dom": "^16.5.2",
     "react-google-maps": "^9.4.5",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.3",
-    "webpack": "^4.29.6"
+    "react-scripts": "2.0.3"
   },
   "proxy": {
     "/api": {
