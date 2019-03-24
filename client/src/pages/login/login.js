@@ -36,6 +36,19 @@ class login extends React.Component {
         });
     };
 
+    handleFormSubmit = event => {
+        event.preventDefault();
+        if (this.state.userName && this.state.userPassword) {
+            API.saveUser({
+                username: this.state.userName,
+                password: this.state.userPassword
+            })
+                .then(res => this.loadUsers())
+                .catch(err => console.log(err));
+        }
+        console.log('stateCheck:',this.state)
+    };
+
     render() {
         return (
             <Container fluid>
@@ -47,6 +60,9 @@ class login extends React.Component {
                             <form>
                                 <Input value={this.state.userName} onChange={this.handleInputChange} name="userName" placeholder="Please Enter Your Username"/>
                                 <Input value={this.state.password} onChange={this.handleInputChange} name="password" placeholder="Please Enter You Password" />
+                                <FormBtn disabled={!(this.state.enter) && (this.state.enter)} onClick={this.stateFormSubmit}>Enter</FormBtn>
+                                <br/>
+                                <br/>
                                 <FormBtn disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}>Login To Surf Diary</FormBtn>
                                 <FormBtn disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}>Create New User</FormBtn>
                             </form>

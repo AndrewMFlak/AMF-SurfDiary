@@ -8,7 +8,7 @@
     "debug": "concurrently \"node --inspect-brk=43240 server.js\" \"npm run client\"",
     "start": "if-env NODE_ENV=production && npm run server || npm run start:dev",
     "server": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "seed": "node scripts/seedDb.js",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",

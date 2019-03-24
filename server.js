@@ -42,6 +42,7 @@ app.listen(PORT, function() {
     console.log('<br>');
     console.log('http://localhost:3001/api/spots');
     console.log('<br>');
+    console.log('http://localhost:3001/api/users');
     console.log('http://localhost:3000/');
     console.log('<br>');
     console.log('https://git.heroku.com/blooming-coast-38158.git')

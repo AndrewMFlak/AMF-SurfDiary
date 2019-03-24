@@ -2,7 +2,7 @@ var path = require('path');
 var router = require('express').Router();
 var db = require('../models');
 
-
+// surf spot functions for db post
 var spotFunctions = {
     findAll: function (req,res) {
         db.Spot  
@@ -47,6 +47,54 @@ router.delete('/api/spots/:id', spotFunctions.remove)
 router.get('/api/spots/:id', spotFunctions.findById)
 
 router.patch('/api/spots/:id', spotFunctions.update)
+
+// User functions for db post
+var userFunctions = {
+    findAll: function (req,res) {
+        db.User
+        .find(req.query)
+        .sort({data: -1})
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+    },
+    findById: function(req, res) {
+        db.User
+        .findById(req.params.id)
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+    },
+    create: function(req, res) {
+        db.User
+        .create(req.body)
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+    },
+    update: function(req, res) {
+        db.User
+        .findOneAndUpdate({_id: req.params.id},res.body)
+        .then(dbModel=> res.json(dbModel))
+        .catch(err => res.status(422).json(err));
+    },
+    remove: function(req, res) {
+        db.User
+        .findById({_id:req.params.id})
+        .then(dbModel=> dbModel.remove())
+        .then(dbModel => res.json(dbModel))
+        .catch(err=> res.status(422).json(err));
+    }
+}
+
+router.get('/api/users',userFunctions.findAll)
+
+router.post('/api/users', userFunctions.create)
+
+router.delete('/api/users/:id', userFunctions.remove)
+
+router.get('/api/users/:id', userFunctions.findById)
+
+router.patch('/api/users/:id', userFunctions.update)
+
+
 
 
 router.use(function (req, res) {

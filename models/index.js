@@ -1,3 +1,4 @@
 module.exports = {
-    Spot: require('./Spot')
+    Spot: require('./Spot'),
+    User: require('./User')
 }
