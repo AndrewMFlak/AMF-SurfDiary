@@ -14,7 +14,7 @@ const Nav = () =>
                         <Logo></Logo>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link hvr-fade" to={routes.HOME}>
+                        <Link className="nav-link hvr-fade" to={routes.INTRO}>
                             Sign-Out
                     </Link>
                     </li>

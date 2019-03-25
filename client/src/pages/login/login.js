@@ -11,6 +11,7 @@ class login extends React.Component {
             users: [],
             loggedIn: '',
             userName: '',
+            userEmail: '',
             userPassword: ''
         };
     }
@@ -23,7 +24,7 @@ class login extends React.Component {
         API.getUsers()
             .then(res =>
                 this.setState({
-                    users: res.data, userName: "", userPassword: "", loggedIn: true})
+                    users: res.data, userName: "", userEmail: "", userPassword: "", loggedIn: true})
             )
             .catch(err => console.log(err));
     };
@@ -46,11 +47,12 @@ class login extends React.Component {
     //When the form is submitted, use the API.saveUser method to save the surf spot data and then reload all spots from the db
     handleFormSubmit = event => {
         event.preventDefault();
-        if (this.state.userName && 
+        if (this.state.userName && this.state.userEmail &&
             this.state.userPassword) {
             API.saveUser({
                 loggedIn: this.state.loggedIn,
                 userName: this.state.userName,
+                userEmail: this.state.userEmail,
                 userPassword: this.state.userPassword
             })
                 .then(res => this.loadUsers())
@@ -74,6 +76,7 @@ class login extends React.Component {
                             <br/>
                             <form id="formId">
                                 <Input value={this.state.userName} onChange={this.handleInputChange} name="userName" placeholder="Please Enter Your Username"/>
+                                <Input value={this.state.userEmail} onChange={this.handleInputChange} name="userEmail" placeholder="Please Enter Your Email...We promise not to send you a bunch of shit."/>
                                 <Input value={this.state.userPassword} onChange={this.handleInputChange} name="userPassword" placeholder="Please Enter You Password" />
                                 <FormBtn disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}>Enter</FormBtn>
                                 <FormBtn type="button" name="cancelCourse" value="ClearForm">ClearForm</FormBtn>

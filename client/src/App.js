@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import login from "./pages/login/login";
 import home from "./pages/home";
+import intro from "./pages/intro";
 import content from "./pages/content";
 import spots from "./pages/spots";
 // import spotDetail from "./pages/spotDetail";
@@ -33,7 +34,8 @@ class App extends Component {
         <div>
           <Nav />
           <Switch>
-            <Route exact path="/" component={home} />
+            <Route exact path="/" component={intro} />
+            <Route exact path="/home" component={home}/>
             <Route exact path="/login" component={login}/>
             <Route exact path="/content" component={content} />
             <Route exact path="/content/:id" component={contentDetail} />
