@@ -45,7 +45,8 @@ app.listen(PORT, function() {
     console.log('http://localhost:3001/api/users');
     console.log('http://localhost:3000/');
     console.log('<br>');
-    console.log('https://git.heroku.com/blooming-coast-38158.git')
+    console.log('https://blooming-coast-38158.herokuapp.com/');
+    console.log('https://www.surfdiary.app');
 });
 
 
