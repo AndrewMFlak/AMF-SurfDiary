@@ -19,7 +19,8 @@ class MyFancyComponent extends Component {
     render() {
         const MyMapComponent = compose(
             withProps({
-                googleMapURL: ('https://maps.googleapis.com/maps/api/js?key=' + process.env.REACT_APP_GoogleAPIKEY + '&v=3.exp&libraries=geometry,drawing,places'),
+                googleMapURL: ('https://maps.googleapis.com/maps/api/js?key=AIzaSyCGVswcbMwZRV5Qv-XSfEjlL3JbSEESzOI&v=3.exp&libraries=geometry,drawing,places'),
+                // googleMapURL: ('https://maps.googleapis.com/maps/api/js?key=' + process.env.REACT_APP_GoogleAPIKEY + '&v=3.exp&libraries=geometry,drawing,places'),
                 loadingElement: (<div style={{ height: '100%' }} />),
                 containerElement: (<div style={{ height: '400px' }} />),
                 mapElement: (<div style={{ height: '100%' }} />),
@@ -34,12 +35,12 @@ class MyFancyComponent extends Component {
                             if (status !== 'ZERO_RESULTS') {
                                 let coords = results[0].geometry.location.toJSON();
                                 console.log(coords);
-                                this.setState({
-                                    currentLocation: {
-                                        lat: coords.lat,
-                                        lng: coords.lng
-                                    }
-                                })
+                                // this.setState({
+                                //     currentLocation: {
+                                //         lat: coords.lat,
+                                //         lng: coords.lng
+                                //     }
+                                // })
                                 let lat = coords.lat;
                                 let lng = coords.lng;
 
@@ -64,7 +65,7 @@ class MyFancyComponent extends Component {
         )(props =>
             <GoogleMap
                 defaultZoom={8}
-                defaultCenter={new window.google.maps.LatLng(this.state.lat, this.state.lng)}
+                defaultCenter={new window.google.maps.LatLng(this.props.lat, this.props.lng)}
             >
             </GoogleMap>
         );

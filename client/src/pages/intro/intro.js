@@ -7,8 +7,10 @@ class intro extends React.Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col size='md-6'>
-
+                    <Col size='lg-6'>
+                        <p id="welcome">
+                            Welcome
+                        </p>
                     </Col>
                 </Row>
             </Container>
