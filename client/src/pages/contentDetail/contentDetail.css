@@ -1,14 +1,17 @@
 * {
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
+    font-size: 14pts;
     }
-
 body {
     clear: both;
     overflow: auto;
     background-image: url('../../assets/images/belmar4.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+}
+.spotNotes {
+    font-size: 14pts;
 }
 .containerBackground {
     clear: both;

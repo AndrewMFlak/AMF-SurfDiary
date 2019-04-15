@@ -67,7 +67,7 @@ class contentDetail extends React.Component {
                             <h1>
                                 Spot Notes
                             </h1>
-                            <p>
+                            <p className="spotNotes">
                                 {this.state.spots.spotNotes}
                             </p>
                         </article>
