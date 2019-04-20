@@ -3,7 +3,7 @@
     font-family: 'Amatic SC', cursive;
 }
 .introduction {
-    height: 500px;
+    height: auto;
     font-size: 18pt;
     clear: both;
     overflow: auto;
@@ -13,6 +13,11 @@
     border: 1px white solid;
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
     background-blend-mode: screen;    padding: 35px;
-    text-align: justify;
+    text-align: center;
     box-shadow: 15px 5px 5px black;
+}
+.buttonFormat {
+    font-size: 14pt;
+    margin-right: 5px;
+    padding: 5px;
 }

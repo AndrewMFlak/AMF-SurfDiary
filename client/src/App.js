@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import login from "./pages/login/login";
+import signup from './pages/signup/signup';
 import home from "./pages/home";
-import intro from "./pages/intro";
+import Welcome from "./pages/Welcome";
 import content from "./pages/content";
 import spots from "./pages/spots";
 // import spotDetail from "./pages/spotDetail";
@@ -34,8 +35,9 @@ class App extends Component {
         <div>
           <Nav />
           <Switch>
-            <Route exact path="/" component={intro} />
+            <Route exact path="/" component={Welcome} />
             <Route exact path="/home" component={home}/>
+            <Route exact path="/signup" component={signup}/>
             <Route exact path="/login" component={login}/>
             <Route exact path="/content" component={content} />
             <Route exact path="/content/:id" component={contentDetail} />

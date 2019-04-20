@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Amatic SC, cursive';
+    font-size: 14pts;
+}
+body {
+    clear: both;
+    overflow: auto;
+    background-image: url('../../assets/images/belmar2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.signupDiv {
+    clear: both;
+    overflow: auto;
+    position: relative;
+    height: 400px;
+    margin: 0 auto;
+    text-align: left;
+    width: 60%;
+    border: 1px white solid;
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background-blend-mode: screen;    
+    padding: 35px;
+    text-align: left;
+    box-shadow: 15px 5px 5px black;
+}
+/* .formButton {
+    font-size: 14pts;
+    margin: 5px;
+    padding: 5px;
+} */
