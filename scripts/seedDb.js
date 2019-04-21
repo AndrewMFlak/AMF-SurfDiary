@@ -27,6 +27,27 @@ const surfSpot = [
     }
 ];
 
+const user = [
+    {
+        userName: "Some Guy",
+        userEmail: "SomeGuy@aol.com",
+        userHomeBreak: "Pipeline",
+        userHomeBreakLat: 0,
+        userHomeBreakLng: 0,
+        userPassword: "password",
+        userTimeStamp: new Date(Date.now())
+    },
+    {
+        userName: "Andrew Flak",
+        userEmail: "andrewmflak@gmail.com",
+        userHomeBreak: "16 th Ave Belmar, NJ.",
+        userHomeBreak: 0,
+        userHomeBreakLng: 0,
+        userPassword: "password",
+        userTimeStamp: new Date(Date.now())
+    }
+]
+
 // console.log(surfSpot);
 
 db.Spot
@@ -38,5 +59,18 @@ db.Spot
     })
     .catch(err => {
         console.error(err);
+        process.exit(1);
+    });
+
+db.User
+    .deleteMany({})
+    .then(() => db.Spot.collection.insertyMany(user)
+    )
+    .then(data => {
+        console.log(data.insertedIds.length + " records inserted!");
+        process.exit(0);
+    })
+    .catch(err => {
+        console.log(err);
         process.exit(1);
     });

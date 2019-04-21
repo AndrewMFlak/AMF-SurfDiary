@@ -12,8 +12,8 @@ class Welcome extends React.Component {
             <Container fluid>
                 <Row>
                     <Col size='lg-6'>
-                        <p className="container-fluid">
-                            <p className="introduction">
+                        <div className="container-fluid">
+                            <div className="introduction">
                                 Welcome to the surf diary.  If this is your first time visiting please sign up.  If you are a returning guest please sign in.
                                 <br></br>
                                 <br></br>
@@ -23,8 +23,8 @@ class Welcome extends React.Component {
                                 <button className="buttonFormat">
                                     <Link className="nav-link hvr-fade" to={routes.LOGIN}>Sign In</Link>
                                 </button>
-                            </p>
-                        </p>
+                            </div>
+                        </div>
                     </Col>
                 </Row>
             </Container>
