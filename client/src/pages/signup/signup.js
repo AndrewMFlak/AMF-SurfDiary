@@ -35,7 +35,8 @@ class signup extends React.Component {
             )
             .catch(err => console.log(err));
     };
-    // geoCodeBreak() {
+
+    // geoCodeBreak(...) {
     //     let geocoder = new window.google.maps.Geocoder();
     //     geocoder.geocode({ 'address': this.state.userHomeBreak }, function (results, status) {
     //         if (status === 'OK') {
@@ -64,6 +65,23 @@ class signup extends React.Component {
     handleFormSubmit = event => {
         event.preventDefault();
         if (this.state.userName && this.state.userEmail && this.state.userPassword && this.state.userHomeBreak) {
+            // let geocoder = new window.google.maps.Geocoder();
+            // geocoder.geocode({ 'address': this.state.userHomeBreak }, function (results, status) {
+            // if (status === 'OK') {
+            //     if (status !== 'ZERO_RESULTS') {
+            //         let coords = results[0]
+            //             .geometry.location.toJSON();
+            //         console.log(coords);
+            //         let lat = coords.lat;
+            //         let lng = coords.lng;
+            //         this.setState({
+            //             userHomeBreakLat: lat,
+            //             userHomeBreakLng: lng
+            //         })
+            //     }
+        //     }
+        //     console.log(this.state);
+        // });
             API.saveUser({
                 loggedIn: this.state.loggedIn,
                 userName: this.state.userName,

@@ -72,7 +72,7 @@ class contentDetail extends React.Component {
                             </p>
                         </article>
                     </Col>
-                    <MyFancyComponent/>
+                    <MyFancyComponent address={this.state.spots.address} />
                 </Row>
                 <Row>
                     <button onClick={() => this.handleUpdate(true)}>Update</button>
