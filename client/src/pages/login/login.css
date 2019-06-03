@@ -25,7 +25,8 @@ body {
     background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
      background-blend-mode: normal, multiply; */
     background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
-    background-blend-mode: screen;    padding: 35px;
+    background-blend-mode: screen;    
+    padding: 35px;
     text-align: left;
     box-shadow: 15px 5px 5px black;
 }

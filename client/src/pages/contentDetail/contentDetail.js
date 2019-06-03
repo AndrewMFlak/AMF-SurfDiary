@@ -20,6 +20,7 @@ class contentDetail extends React.Component {
         API.getSpot(this.props.match.params.id)
             .then(res => this.setState({ spots: res.data }))
             .catch(err => console.log(err));
+        console.log('addressDetailsCheck: ', this.props.spots.address);
     }
 
     handleUpdate(isUpdate) {
@@ -72,7 +73,7 @@ class contentDetail extends React.Component {
                             </p>
                         </article>
                     </Col>
-                    <MyFancyComponent address={this.state.spots.address} />
+                    <MyFancyComponent spotLocation={this.state.spots.spotLocation} />
                 </Row>
                 <Row>
                     <button onClick={() => this.handleUpdate(true)}>Update</button>
