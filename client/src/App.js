@@ -12,6 +12,7 @@ import aboutUs from "./pages/aboutUs";
 import contentDetail from "./pages/contentDetail";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import signout from "./pages/signout";
 // import Footer from './components/Footer/Footer';
 //routes.js used for userAuth
 // import * as routes from '../src/constants/routes';
@@ -44,6 +45,7 @@ class App extends Component {
             <Route exact path="/spots" component={spots} />
             {/* <Route exact path="/spots/:id" component={spotDetail} */}
             <Route exact path="/aboutUs" component={aboutUs} />
+            <Route exact path="/GoodBye" component={signout}/>
             {/* <Route component={NoMatch} /> */}
             {/* <Route exact path="/aboutUs" components={about} />
             <Route exact path="/surfSpot" components={form} /> */}

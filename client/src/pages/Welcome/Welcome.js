@@ -18,7 +18,7 @@ class Welcome extends React.Component {
                                 <br></br>
                                 <br></br>
                                 <button className="buttonFormat">
-                                    <Link className="nav-link hvr-fade" to={routes.SIGN_UP}>Sign Up</Link>
+                                    <Link className="nav-link hvr-fade" to={routes.LOGIN}>Login</Link>
                                 </button>
                                 <button className="buttonFormat">
                                     <Link className="nav-link hvr-fade" to={routes.LOGIN}>Sign In</Link>

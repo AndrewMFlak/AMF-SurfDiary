@@ -18,6 +18,9 @@ class signup extends React.Component {
             userPassword: ''
         };
     }
+    componentDidMount() {
+        this.loadUsers();
+    }
 
     loadUsers = () => {
         API.getUsers()
@@ -30,10 +33,9 @@ class signup extends React.Component {
                     userHomeBreakLat: "",
                     userHomeBreakLng: "",
                     userPassword: "",
-                    loggedIn: true
-                })
-            )
-            .catch(err => console.log(err));
+                    loggedIn: true})
+                )
+                .catch(err => console.log(err));
     };
 
     // geoCodeBreak(...) {
@@ -54,6 +56,11 @@ class signup extends React.Component {
     //         }
     //     })
     // };
+    deleteUser = id => {
+        API.deleteUser(id)
+        .then(res=>this.loadUsers())
+        .catch(err => console.log(err));
+    }
 
     handleInputChange = event => {
         const { name, value } = event.target;
@@ -65,23 +72,6 @@ class signup extends React.Component {
     handleFormSubmit = event => {
         event.preventDefault();
         if (this.state.userName && this.state.userEmail && this.state.userPassword && this.state.userHomeBreak) {
-            // let geocoder = new window.google.maps.Geocoder();
-            // geocoder.geocode({ 'address': this.state.userHomeBreak }, function (results, status) {
-            // if (status === 'OK') {
-            //     if (status !== 'ZERO_RESULTS') {
-            //         let coords = results[0]
-            //             .geometry.location.toJSON();
-            //         console.log(coords);
-            //         let lat = coords.lat;
-            //         let lng = coords.lng;
-            //         this.setState({
-            //             userHomeBreakLat: lat,
-            //             userHomeBreakLng: lng
-            //         })
-            //     }
-        //     }
-        //     console.log(this.state);
-        // });
             API.saveUser({
                 loggedIn: this.state.loggedIn,
                 userName: this.state.userName,
@@ -92,15 +82,14 @@ class signup extends React.Component {
                 userPassword: this.state.userPassword
             })
                 .then(res => this.loadUsers())
-                .then()
                 .catch(err => console.log(err));
         }
         console.log('stateCheck:', this.state)
     }
 
-    clearForm = () => {
-        document.getElementById("formId").reset();
-    };
+    // clearForm = () => {
+    //     document.getElementById("formId").reset();
+    // };
 
     render() {
         return (

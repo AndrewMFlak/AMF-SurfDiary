@@ -1,5 +1,4 @@
 import React from 'react';
-import './home.css';
 import API from '../../utils/API';
 import { Col, Row, Container } from '../../components/grid';
 import './home.css';
