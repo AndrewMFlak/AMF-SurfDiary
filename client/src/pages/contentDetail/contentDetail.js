@@ -20,6 +20,7 @@ class contentDetail extends React.Component {
         API.getSpot(this.props.match.params.id)
             .then(res => this.setState({ spots: res.data }))
             .catch(err => console.log(err));
+        console.log(this.state);
     }
 
     handleUpdate(isUpdate) {
@@ -77,7 +78,7 @@ class contentDetail extends React.Component {
                 <Row>
                     <button onClick={() => this.handleUpdate(true)}>Update</button>
                     <Col size="md-2">
-                        <Link to="/">← Back to Your Surf Spots</Link>
+                        <Link to="/spots">← Back to Your Surf Spots</Link>
                     </Col>
                 </Row>
             </div>
