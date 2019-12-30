@@ -29,7 +29,7 @@ class content extends React.Component {
                 .catch(err => console.log(err));
     };
 
-    // Deletes a spot from the database with a given id, then relaods spots from the db
+    // Deletes a spot from the database with a given id, then reloads spots from the db
     deleteSpot = id => {
         API.deleteSpot(id)
         .then(res=> this.loadSpots())

@@ -39,14 +39,9 @@ mongoose.connect(
 // Start the API server
 app.listen(PORT, function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+    console.log('http://localhost:3000/')
+    console.log('http://localhost:3001/')
     console.log('<br>');
-    console.log('http://localhost:3001/api/spots');
-    console.log('<br>');
-    console.log('http://localhost:3001/api/users');
-    console.log('http://localhost:3000/');
-    console.log('<br>');
-    console.log('https://blooming-coast-38158.herokuapp.com/');
-    console.log('https://www.surfdiary.app');
 });
 
 

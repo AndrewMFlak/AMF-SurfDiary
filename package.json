@@ -24,7 +24,7 @@
   "dependencies": {
     "ajv": "^6.10.0",
     "ajv-keywords": "^3.4.0",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "body-parser": "^1.18.3",
     "buffer": "^5.2.1",
     "express": "^4.16.4",
