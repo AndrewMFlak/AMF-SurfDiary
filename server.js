@@ -41,6 +41,7 @@ app.listen(PORT, function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
     console.log('http://localhost:3000/')
     console.log('http://localhost:3001/')
+    console.log('https://blooming-coast-38158.herokuapp.com/') 
     console.log('<br>');
 });
 

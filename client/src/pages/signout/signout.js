@@ -1,5 +1,5 @@
 import React from 'react';
-import API from '../../utils/API';
+// import API from '../../utils/API';
 import { Col, Row, Container } from '../../components/grid';
 import './signout.css';
 
