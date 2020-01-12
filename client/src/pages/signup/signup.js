@@ -13,8 +13,6 @@ class signup extends React.Component {
             userName: '',
             userEmail: '',
             userHomeBreak: '',
-            userHomeBreakLat: '',
-            userHomeBreakLng: '',
             userPassword: ''
         };
     }
@@ -30,32 +28,12 @@ class signup extends React.Component {
                     userName: "",
                     userEmail: "",
                     userHomeBreak: "",
-                    userHomeBreakLat: "",
-                    userHomeBreakLng: "",
                     userPassword: "",
-                    loggedIn: true})
+                    loggedIn: ""})
                 )
                 .catch(err => console.log(err));
     };
 
-    // geoCodeBreak(...) {
-    //     let geocoder = new window.google.maps.Geocoder();
-    //     geocoder.geocode({ 'address': this.state.userHomeBreak }, function (results, status) {
-    //         if (status === 'OK') {
-    //             if (status !== 'ZERO_RESULTS') {
-    //                 let coords = results[0]
-    //                     .geometry.location.toJSON();
-    //                 console.log(coords);
-    //                 let lat = coords.lat;
-    //                 let lng = coords.lng;
-    //                 this.setState({
-    //                     userHomeBreakLat: lat,
-    //                     userHomeBreakLng: lng
-    //                 })
-    //             }
-    //         }
-    //     })
-    // };
     deleteUser = id => {
         API.deleteUser(id)
         .then(res=>this.loadUsers())
@@ -68,28 +46,26 @@ class signup extends React.Component {
             [name]: value
         });
     };
-
+    //When the form is submitted, use the API.saveUser method to save the user to api and db
     handleFormSubmit = event => {
         event.preventDefault();
         if (this.state.userName && this.state.userEmail && this.state.userPassword && this.state.userHomeBreak) {
             API.saveUser({
-                loggedIn: this.state.loggedIn,
                 userName: this.state.userName,
                 userEmail: this.state.userEmail,
                 userHomeBreak: this.state.userHomeBreak,
-                userHomeBreakLat: this.state.userHomeBreakLat,
-                userHomeBreakLng: this.state.userHomeBreakLng,
                 userPassword: this.state.userPassword
             })
                 .then(res => this.loadUsers())
+                .then(console.log('loadUsers Success'))
                 .catch(err => console.log(err));
         }
         console.log('stateCheck:', this.state)
-    }
+    };
 
-    // clearForm = () => {
-    //     document.getElementById("formId").reset();
-    // };
+    clearForm = () => {
+        document.getElementById("formId").reset();
+    };
 
     render() {
         return (
@@ -98,15 +74,18 @@ class signup extends React.Component {
                     <Col size='md-4'>
                         <div className="signupDiv">
                             <h1>
-                                Create Your Profile To The Surf Diary Here!
+                                Create Your Profile For The Surf Diary Here!
                             </h1>
                             <br />
-                            <form id="formId">
+                            <form>
                                 <Input value={this.state.userName} onChange={this.handleInputChange} name="userName" placeholder="Please Enter Your Username" />
-                                <Input value={this.state.userEmail} onChange={this.handleInputChange} name="userEmail" placeholder="Please Enter Your Email...We promise not so send you a bunch of shit." />
+                                <Input value={this.state.userEmail} onChange={this.handleInputChange} name="userEmail" placeholder="Please Enter Your Email...We promise not so send you a bunch of marketing stuff." />
+                                <Input value={this.state.userPassword} onChange={this.handleInputChange} name="userPassword" placeholder="Please Enter Your Password" />
                                 <Input value={this.state.userHomeBreak} onChange={this.handleInputChange} name="userHomeBreak" placeholder="Please Enter Your Home Break" />
                                 <Input value={this.state.userPassword} onChange={this.handleInputChange} name="userPassword" placeholder="Please Enter Your Password" />
-                                <FormBtn className="formButton" disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}>Enter</FormBtn>
+                                <FormBtn 
+                                disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}>
+                                Submit User Info</FormBtn>
                                 <FormBtn className="formButton" type="button" name="cancelCourse" value="ClearForm">Clear Form</FormBtn>
 
                             </form>

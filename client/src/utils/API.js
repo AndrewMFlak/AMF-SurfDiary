@@ -20,8 +20,6 @@ export default {
     patchSpot: function(id, spotData) {
         return axios.patch('/api/spots/' + id, spotData);
     },
-    
-    
     getUsers: function () {
         return axios.get('/api/users');
     },

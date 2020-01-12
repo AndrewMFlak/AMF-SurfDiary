@@ -29,7 +29,7 @@ class content extends React.Component {
                 .catch(err => console.log(err));
     };
 
-    // Deletes a spot from the database with a given id, then reloads spots from the db
+    // Deletes a spot from the database with a given id, then relaods spots from the db
     deleteSpot = id => {
         API.deleteSpot(id)
         .then(res=> this.loadSpots())
@@ -54,8 +54,14 @@ class content extends React.Component {
                 spotNotes: this.state.spotNotes,  
             })
                 .then(res => this.loadSpots())
+                .then(console.log('loadSpots Success'))
                 .catch(err => console.log(err));
         }
+        console.log('User stateCheck:', this.state)
+    };
+
+    clearForm = () => {
+        document.getElementById("formId").reset();
     };
 
     render () {
@@ -89,6 +95,8 @@ class content extends React.Component {
                                 onClick={this.handleFormSubmit}
                                 >
                                 Submit Spot Info
+                                </FormBtn>
+                                <FormBtn className="formButton" type="button" name="cancelCourse" value="ClearForm">
                                 </FormBtn>
                             </form>
                         </div>

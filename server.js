@@ -32,7 +32,8 @@ mongoose.Promise = global.Promise;
 //  Connect to MongoDB
 mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/surfDiary", {
-        useNewUrlParser: true
+        useNewUrlParser: true,
+        useUnifiedTopology: true
     }
 );
 

@@ -81,14 +81,11 @@ class login extends React.Component {
                             <br/>
                             <form id="formId">
                                 <Input value={this.state.userName} onChange={this.handleInputChange} name="userName" placeholder="Please Enter Your Username"/>
-                                <Input value={this.state.userEmail} onChange={this.handleInputChange} name="userEmail" placeholder="Please Enter Your Email."/>
                                 <Input value={this.state.userPassword} onChange={this.handleInputChange} name="userPassword" placeholder="Please Enter You Password" />
                                 <FormBtn disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}>Enter</FormBtn>
                                 <FormBtn type="button" name="cancelCourse" value="ClearForm">ClearForm</FormBtn>
                                 <br/>
                                 <br/>
-                                <FormBtn disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}>Login To Surf Diary</FormBtn>
-                                <FormBtn disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}>Create New User</FormBtn>
                             </form>
                         </div>
                     </Col>
