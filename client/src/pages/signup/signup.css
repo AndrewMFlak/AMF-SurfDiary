@@ -3,13 +3,6 @@
     font-family: 'Amatic SC, cursive';
     font-size: 14pts;
 }
-body {
-    clear: both;
-    overflow: auto;
-    background-image: url('../../assets/images/belmar2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 .signupDiv {
     clear: both;
     overflow: auto;

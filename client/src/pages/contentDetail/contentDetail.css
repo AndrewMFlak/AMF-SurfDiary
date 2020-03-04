@@ -3,13 +3,6 @@
     font-family: 'Amatic SC', cursive;
     font-size: 14pts;
     }
-body {
-    clear: both;
-    overflow: auto;
-    background-image: url('../../assets/images/belmar4.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 .spotNotes {
     font-size: 14pts;
 }
@@ -17,7 +10,6 @@ body {
     clear: both;
     overflow: auto;
     position: relative;
-    height: auto;
     padding: 32px;
     width: 60%;
     margin: 0 auto;

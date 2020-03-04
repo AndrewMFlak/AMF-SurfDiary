@@ -13,7 +13,8 @@ class signup extends React.Component {
             userName: '',
             userEmail: '',
             userHomeBreak: '',
-            userPassword: ''
+            userPassword: '',
+            existingUser: true
         };
     }
     componentDidMount() {
@@ -29,7 +30,8 @@ class signup extends React.Component {
                     userEmail: "",
                     userHomeBreak: "",
                     userPassword: "",
-                    loggedIn: ""})
+                    loggedIn: "",
+                    existingUser: ""})
                 )
                 .catch(err => console.log(err));
     };
@@ -54,7 +56,9 @@ class signup extends React.Component {
                 userName: this.state.userName,
                 userEmail: this.state.userEmail,
                 userHomeBreak: this.state.userHomeBreak,
-                userPassword: this.state.userPassword
+                userPassword: this.state.userPassword,
+                existingUser: true,
+                loggedIn: true
             })
                 .then(res => this.loadUsers())
                 .then(console.log('loadUsers Success'))
@@ -82,7 +86,6 @@ class signup extends React.Component {
                                 <Input value={this.state.userEmail} onChange={this.handleInputChange} name="userEmail" placeholder="Please Enter Your Email...We promise not so send you a bunch of marketing stuff." />
                                 <Input value={this.state.userPassword} onChange={this.handleInputChange} name="userPassword" placeholder="Please Enter Your Password" />
                                 <Input value={this.state.userHomeBreak} onChange={this.handleInputChange} name="userHomeBreak" placeholder="Please Enter Your Home Break" />
-                                <Input value={this.state.userPassword} onChange={this.handleInputChange} name="userPassword" placeholder="Please Enter Your Password" />
                                 <FormBtn 
                                 disabled={!(this.state.userName) && (this.state.userPassword)} onClick={this.handleFormSubmit}>
                                 Submit User Info</FormBtn>

@@ -10,10 +10,11 @@ class login extends React.Component {
         super(props);
         this.state = {
             users: [],
-            loggedIn: '',
-            userName: '',
-            userEmail: '',
-            userPassword: ''
+            loggedIn: "",
+            userName: "",
+            userEmail: "",
+            userPassword: "",
+            existingUser: ""
         };
     }
     // When the component mounts, load all 
@@ -29,7 +30,8 @@ class login extends React.Component {
                     userName: "", 
                     userEmail: "", 
                     userPassword: "", 
-                    loggedIn: true})
+                    loggedIn: true,
+                    existingUser: true})
             )
             .catch(err => console.log(err));
     };
@@ -52,7 +54,7 @@ class login extends React.Component {
     //When the form is submitted, use the API.saveUser method to save the surf spot data and then reload all spots from the db
     handleFormSubmit = event => {
         event.preventDefault();
-        if (this.state.userName && this.state.userEmail &&
+        if (this.state.userName &&
             this.state.userPassword) {
             API.saveUser({
                 loggedIn: this.state.loggedIn,

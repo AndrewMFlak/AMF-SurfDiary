@@ -7,6 +7,11 @@ import { Link } from 'react-router-dom';
 import * as routes from '../../constants/routes.js';
 
 class Welcome extends React.Component {
+    // constructor(props) {
+    //     this.state = {
+    //         loggedIn = false
+    //     }
+    // }
     render() {
         return (
             <Container fluid>

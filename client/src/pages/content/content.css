@@ -11,14 +11,6 @@
     text-align: center;
     } */
 
-body {
-    clear: both;
-    overflow: auto;
-    background-image: url('../../assets/images/belmar2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .formDiv {
     clear: both;
     overflow: auto;

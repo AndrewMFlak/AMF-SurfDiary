@@ -11,7 +11,8 @@ class content extends React.Component {
             spots: [],
             spotName: '',
             spotLocation: '',
-            spotNotes: ''
+            spotNotes: '',
+            // loggedIn = false
         };
     }
     // When the component mounts, load all surf spots and save them this this.state.spots
