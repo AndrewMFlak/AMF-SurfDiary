@@ -19,13 +19,15 @@ class Welcome extends React.Component {
                     <Col size='lg-6'>
                         <div className="container-fluid">
                             <div className="introduction">
+                                <div className="introductionHeader">Aloha!!!</div>
+                                <br/>
                                 Welcome to the surf diary!!!
-                                <br></br>  
+                                <br/>  
                                 If this is your first time visiting please sign up.  
-                                <br></br>
+                                <br/>
                                 If you are a returning guest please sign in.
-                                <br></br>
-                                <br></br>
+                                <br/>
+                                <br/>
                                 <button className="buttonFormat">
                                     <Link className="nav-link hvr-fade" to={routes.SIGN_UP}>Sign Up</Link>
                                 </button>

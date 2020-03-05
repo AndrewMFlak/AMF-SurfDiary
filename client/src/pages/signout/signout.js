@@ -15,14 +15,15 @@ class signout extends React.Component {
                 <Row>
                     <Col size='md-6'>
                         <div className="container-fluid">
-                            <div className="goodBye">
-                                <h1>Aloha!!!!</h1>
+                            <div className="goodByeContainer">
+                                <h1 className="goodByeHeader">Aloha!!!!</h1>
                                 Thank you for visiting the surf diary and spreading the good vibes.
-                                <br />
                                 <br />
                                 Come back soon to see all the enhancements we are making.
                                 <br />
-                                Sincerely,<br />
+                                <br />
+                                Sincerely,
+                                <br/>
                                 Andrew Flak
                             </div>
                         </div>

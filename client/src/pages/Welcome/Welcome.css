@@ -2,12 +2,17 @@
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
 }
+.introductionHeader {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+}
 .introduction {
     height: auto;
-    font-size: 18pt;
     clear: both;
     overflow: auto;
     width: 60%;
+    font-size: 24px;
     margin: 0 auto;
     position: relative;
     border: 1px white solid;
