@@ -1,9 +1,9 @@
-var path = require('path');
-var router = require('express').Router();
-var db = require('../models');
+const path = require('path');
+const router = require('express').Router();
+const db = require('../models');
 
 // surf spot functions for db post
-var spotFunctions = {
+const spotFunctions = {
     findAll: function (req,res) {
         db.Spot  
         .find(req.query)
@@ -31,7 +31,7 @@ var spotFunctions = {
     },
     remove: function(req, res) {
         db.Spot
-        .findById({_id:req.params.id})
+        .findById({_id: req.params.id })
         .then(dbModel=> dbModel.remove())
         .then(dbModel => res.json(dbModel))
         .catch(err=> res.status(422).json(err));
@@ -49,7 +49,7 @@ router.get('/api/spots/:id', spotFunctions.findById)
 router.patch('/api/spots/:id', spotFunctions.update)
 
 // User functions for db post
-var userFunctions = {
+const userFunctions = {
     findAll: function (req,res) {
         db.User
         .find(req.query)

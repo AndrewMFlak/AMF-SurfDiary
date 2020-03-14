@@ -61,4 +61,4 @@ typings/
 .next
 
 # ignore package lock files
-package-lock.json
+# package-lock.json

@@ -97,7 +97,7 @@ class content extends React.Component {
                                 >
                                 Submit Spot Info
                                 </FormBtn>
-                                <FormBtn className="formButton" type="button" name="cancelCourse" value="ClearForm">
+                                <FormBtn className="formButton" type="button" name="cancelCourse" value="ClearForm">Clear
                                 </FormBtn>
                             </form>
                         </div>
