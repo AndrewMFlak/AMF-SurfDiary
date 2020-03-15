@@ -62,3 +62,4 @@ typings/
 
 # ignore package lock files
 # package-lock.json
+node_modules
