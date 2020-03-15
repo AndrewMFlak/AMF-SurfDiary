@@ -21,12 +21,6 @@ class spots extends React.Component {
         this.loadSpots();
     }
 
-    //manage state accross file changes
-    // fileChangedHandler = (event) => {
-    //     this.setState({ selectedFile: event.target.files[0] }
-    //     )
-    // }
-
     // Loads all surf spots and sets them thos this.state.spots
     loadSpots = () => {
         API.getSpots()
