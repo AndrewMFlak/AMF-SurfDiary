@@ -9,9 +9,9 @@ var app = express();
 var PORT = process.env.PORT || 3001;
 
 // require .env file
-require('dotenv').config({path:__dirname+'/.env'});
+// require('dotenv').config({path:__dirname+'/.env'});
 // .env TEST
-console.log(process.env.REACT_APP_SERVERTEST);
+// console.log(process.env.REACT_APP_SERVERTEST);
 
 
 
