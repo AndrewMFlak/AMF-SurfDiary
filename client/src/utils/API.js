@@ -7,7 +7,7 @@ export default {
     },
     //delete a single surf spot
     deleteSpot: function (id) {
-        return axios.delete('/api/spots');
+        return axios.delete('/api/spots/' + id);
     },
     //post new surf spot
     saveSpot: function(spotData) {
@@ -24,7 +24,7 @@ export default {
         return axios.get('/api/users');
     },
     deleteUser: function (id) {
-        return axios.delete('/api/users');
+        return axios.delete('/api/users/' + id);
     },
     saveUser: function(userData) {
         return axios.post('/api/users', userData);
