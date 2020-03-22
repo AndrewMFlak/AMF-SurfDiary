@@ -42,7 +42,7 @@ class contentDetail extends React.Component {
         event.preventDefault();
         if (this.state.spots.spotName &&
             this.state.spots.spotLocation) {
-            API.patchBook(this.props.match.params.id,
+            API.patchSpot(this.props.match.params.id,
                 this.state.spots)
                 .then(res => this.setState({ isUpdate: false }))
                 .catch(err => console.log(err));
@@ -76,9 +76,9 @@ class contentDetail extends React.Component {
                     {/* <MyFancyComponent spotLocation={this.state.spots.spotLocation} /> */}
                 </Row>
                 <Row>
-                    <button onClick={() => this.handleUpdate(true)}>Update</button>
+                    <FormBtn onClick={() => this.handleUpdate(true)}>Update</FormBtn>
                     <Col size="md-2">
-                        <Link to="/spots">← Back to Your Surf Spots</Link>
+                        <Link to="/spots">← Return to Your Surf Spots</Link>
                     </Col>
                 </Row>
             </div>
@@ -87,18 +87,16 @@ class contentDetail extends React.Component {
 
     getUpdateform = () => (
         <div className="container-fluid">
-            <Row>
-                <Col size="lg-6 sm-8">
-                    <div className="containerBackground">
+            <div className="containerBackground">
+                <Row>
+                    <Col size="lg-6 sm-8">
                         <Jumbotron>
-                            <h1>What Spots Do I want to Visit</h1>
-                        </Jumbotron>
-                    </div>
-                </Col>
-            </Row>
-            <Row>
-                <Col size="lg-6 sm-8">
-                    <div className="containerBackground">
+                            <h1>Let the Good Times Roll</h1>
+                        </Jumbotron> 
+                    </Col>
+                </Row>
+                <Row>
+                    <Col size="lg-6 sm-8">
                         <form>
                             <Input
                                 value={this.state.spots.spotName}
@@ -118,17 +116,17 @@ class contentDetail extends React.Component {
                                 name="spotNotes"
                                 placeholder="Surf Spot Notes (Optional)"
                             />
-                            <button onClick={() => this.handleUpdate(false)}>Cancel</button>
+                            <FormBtn onClick={() => this.handleUpdate(false)}>Cancel</FormBtn>
                             <FormBtn
                                 disabled={!(this.state.spots.spotName && this.state.spots.spotLocation)}
                                 onClick={this.handleFormSubmit}
                             >
                                 Submit Spot
-                        </FormBtn>
+                            </FormBtn>
                         </form>
-                    </div>
-                </Col>
-            </Row>
+                    </Col>
+                </Row>
+            </div>
         </div>
     );
 

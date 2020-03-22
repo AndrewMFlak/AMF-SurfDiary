@@ -39,13 +39,13 @@ class App extends Component {
             <Route exact path="/" component={Welcome} />
             <Route exact path="/home" component={home}/>
             <Route exact path="/signup" component={signup}/>
-            <Route exact path="/signin" component={login}/>
+            <Route exact path="/login" component={login}/>
             <Route exact path="/content" component={content} />
             <Route exact path="/content/:id" component={contentDetail} />
             <Route exact path="/spots" component={spots} />
             {/* <Route exact path="/spots/:id" component={spotDetail} */}
             <Route exact path="/aboutUs" component={aboutUs} />
-            <Route exact path="/GoodBye" component={signout}/>
+            <Route exact path="/signout" component={signout}/>
             {/* <Route component={NoMatch} /> */}
             {/* <Route exact path="/aboutUs" components={about} />
             <Route exact path="/surfSpot" components={form} /> */}
